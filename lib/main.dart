@@ -7,12 +7,12 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
-  var questionIndex = 0;
+class _MyAppState extends State<MyApp> {
+  var _questionIndex = 0;
   var questions = [
     'What\'s your favorite color?',
     'What\'s your favorite animal?'
@@ -20,9 +20,9 @@ class MyAppState extends State<MyApp> {
 
   void answerQuestion() {
     setState(() {
-      questionIndex += 1;
+      _questionIndex += 1;
     });
-    print(questionIndex);
+    print(_questionIndex);
   }
 
   @override
@@ -34,7 +34,7 @@ class MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(questions[questionIndex]),
+            Text(questions[_questionIndex]),
             ElevatedButton(onPressed: answerQuestion, child: Text('Answer 1')),
             ElevatedButton(onPressed: answerQuestion, child: Text('Answer 2')),
             ElevatedButton(onPressed: answerQuestion, child: Text('Answer 3'))
