@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
     },
     {
       'questionText': 'What\'s your favorite animal?',
-      'answers': ['Cat', 'Dog', 'Bird']
+      'answers': ['Cat', 'Dog', 'Falcon', 'Fish']
     }
   ];
 
@@ -43,10 +43,12 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: [
             Question(
-              questionText: questions[_questionIndex],
+              questionText: questions[_questionIndex]['questionText'],
             ),
-            Answer(answerQuestion),
-            Answer(answerQuestion)
+            ...(questions[_questionIndex]['answers'] as List<String>)
+                .map((answer) {
+              return Answer(answerQuestion, answer);
+            }).toList()
           ],
         ),
       ),
