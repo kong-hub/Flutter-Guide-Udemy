@@ -22,18 +22,28 @@ class _MyAppState extends State<MyApp> {
       'answers': [
         {'text': 'Black', 'score': 10},
         {'text': 'Red', 'score': 5},
-        {'text': 'White', 'score': 2}
-      ]
+        {'text': 'Green', 'score': 3},
+        {'text': 'White', 'score': 1},
+      ],
     },
     {
       'questionText': 'What\'s your favorite animal?',
       'answers': [
-        {'text': 'Dog', 'score': 10},
-        {'text': 'Fish', 'score': 5},
-        {'text': 'Ant', 'score': 2},
-        {'text': 'Cat', 'score': 1}
-      ]
-    }
+        {'text': 'Rabbit', 'score': 3},
+        {'text': 'Snake', 'score': 11},
+        {'text': 'Elephant', 'score': 5},
+        {'text': 'Lion', 'score': 9},
+      ],
+    },
+    {
+      'questionText': 'Who\'s your favorite instructor?',
+      'answers': [
+        {'text': 'Max', 'score': 1},
+        {'text': 'Max', 'score': 1},
+        {'text': 'Max', 'score': 1},
+        {'text': 'Max', 'score': 1},
+      ],
+    },
   ];
 
   void _answerQuestion(int score) {
