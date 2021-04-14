@@ -29,7 +29,12 @@ class Result extends StatelessWidget {
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
         ),
-        TextButton(onPressed: resetHandler, child: Text('Try again!'))
+        TextButton(
+          onPressed: resetHandler,
+          child: Text('Try again!'),
+          style: ButtonStyle(
+              foregroundColor: MaterialStateProperty.all(Colors.blue)),
+        )
       ],
     ));
   }
