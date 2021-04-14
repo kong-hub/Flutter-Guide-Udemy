@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_guide_udemy/answer.dart';
-import './question.dart';
 import './quiz.dart';
 import './result.dart';
 
