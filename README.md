@@ -1,4 +1,4 @@
-# flutter_guide_udemy
+# quiz-app-flutter
 
 A new Flutter project.
 
