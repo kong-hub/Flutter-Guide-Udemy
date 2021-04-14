@@ -5,10 +5,28 @@ class Result extends StatelessWidget {
 
   Result({this.totalScore});
 
+  String get resultPharse {
+    String resultText;
+    if (totalScore <= 8) {
+      resultText = 'You are awesome and innocent!';
+    } else if (totalScore <= 12) {
+      resultText = 'Pretty likeable!';
+    } else if (totalScore <= 16) {
+      resultText = 'You are .... strange?!';
+    } else {
+      resultText = 'You are so cute!';
+    }
+    return resultText;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('Your score is $totalScore!'),
+      child: Text(
+        resultPharse,
+        style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
