@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_guide_udemy/answer.dart';
 import './question.dart';
 
 void main() {
@@ -38,9 +39,8 @@ class _MyAppState extends State<MyApp> {
             Question(
               questionText: questions[_questionIndex],
             ),
-            ElevatedButton(onPressed: answerQuestion, child: Text('Answer 1')),
-            ElevatedButton(onPressed: answerQuestion, child: Text('Answer 2')),
-            ElevatedButton(onPressed: answerQuestion, child: Text('Answer 3'))
+            Answer(answerQuestion),
+            Answer(answerQuestion)
           ],
         ),
       ),
