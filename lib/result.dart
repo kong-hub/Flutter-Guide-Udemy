@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final int totalScore;
-
-  Result({this.totalScore});
+  final Function resetHandler;
+  Result({this.totalScore, this.resetHandler});
 
   String get resultPharse {
     String resultText;
@@ -22,11 +22,15 @@ class Result extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        resultPharse,
-        style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-        textAlign: TextAlign.center,
-      ),
-    );
+        child: Column(
+      children: [
+        Text(
+          resultPharse,
+          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
+        TextButton(onPressed: resetHandler, child: Text('Try again!'))
+      ],
+    ));
   }
 }
